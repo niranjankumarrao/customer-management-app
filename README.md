@@ -28,6 +28,7 @@ Tech Stack
     Database: SQLite
 
 Project Structure
-customer-management-app/
-├── client/   # React frontend
-└── server/   # Node.js + Express backend
+        customer-management-
+        app/
+            ├── client/   # React frontend
+            └── server/   # Node.js + Express backend
