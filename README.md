@@ -1,31 +1,31 @@
 Customer Management App
 
-A full-stack web application for managing customers and their multiple addresses.
-Built with React (with React Router), Node.js (Express), and SQLite.
+    A full-stack web application for managing customers and their multiple addresses.
+    Built with React (with React Router), Node.js (Express), and SQLite.
 
 Features
 
-Create, Read, Update, and Delete (CRUD) operations for customers
+    Create, Read, Update, and Delete (CRUD) operations for customers
 
-Manage multiple addresses per customer
+    Manage multiple addresses per customer
 
-Search and filter by city, state, or pin code
+    Search and filter by city, state, or pin code
 
-Pagination and sorting for efficient data browsing
+    Pagination and sorting for efficient data browsing
 
-Client-side and server-side validation
+    Client-side and server-side validation
 
-Error handling and confirmation messages
+    Error handling and confirmation messages
 
-Responsive design (works on desktop and mobile)
+    Responsive design (works on desktop and mobile)
 
 Tech Stack
 
-Frontend: React, React Router, Axios
+    Frontend: React, React Router, Axios
 
-Backend: Node.js, Express.js
+    Backend: Node.js, Express.js
 
-Database: SQLite
+    Database: SQLite
 
 Project Structure
 customer-management-app/
