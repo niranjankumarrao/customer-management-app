@@ -51,4 +51,4 @@ Project Structure
         app/
             ├── client/   # React frontend
             └── server/   # Node.js + Express backend
->>>>>>> ba7d1febc84c30fa6480ec00008fe6369bd03de9
+
