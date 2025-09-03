@@ -10,7 +10,7 @@ export default function CustomerFormPage(props){
 
   useEffect(()=>{
     if(editMode){
-      axios.get(`https://customer-management-apps.onrender.com/api/customers/${id}`)
+      axios.get(`http://localhost:5000/api/customers/${id}`)
         .then(r=> {
           const c = r.data.data;
           setForm({ first_name: c.first_name, last_name: c.last_name, phone_number: c.phone_number });
@@ -25,11 +25,11 @@ export default function CustomerFormPage(props){
       return;
     }
     if(editMode){
-      axios.put(`https://customer-management-apps.onrender.com/api/customers/${id}`, form)
+      axios.put(`http://localhost:5000/api/customers/${id}`, form)
         .then(()=> { alert('Updated'); navigate(`/customers/${id}`); })
         .catch(e=> alert('Error: '+(e.response?.data?.error||e.message)));
     } else {
-      axios.post('https://customer-management-apps.onrender.com/api/customers', {...form})
+      axios.post('http://localhost:5000/api/customers', {...form})
         .then(r=> { alert('Created'); navigate(`/customers/${r.data.data.id}`); })
         .catch(e=> alert('Error: '+(e.response?.data?.error||e.message)));
     }

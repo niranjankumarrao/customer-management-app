@@ -11,27 +11,27 @@ export default function CustomerDetailPage(){
   useEffect(()=>{ fetch(); }, [id]);
 
   function fetch(){
-    axios.get(`https://customer-management-apps.onrender.com/api/customers/${id}`)
+    axios.get(`http://localhost:5000/api/customers/${id}`)
       .then(r=> setCustomer(r.data.data))
       .catch(e=> console.error(e));
   }
 
   function addAddress(){
-    axios.post(`https://customer-management-apps.onrender.com/api/customers/${id}/addresses`, newAddr)
+    axios.post(`http://localhost:5000/api/customers/${id}/addresses`, newAddr)
       .then(()=> { setNewAddr({address_details:'', city:'', state:'', pin_code:''}); fetch(); })
       .catch(e=> console.error(e));
   }
 
   function deleteAddress(addrId){
     if(!window.confirm('Delete address?')) return;
-    axios.delete(`https://customer-management-apps.onrender.com/api/customers/${addrId}`)
+    axios.delete(`http://localhost:5000/api/addresses/${addrId}`)
       .then(()=> fetch())
       .catch(e=> console.error(e));
   }
 
   function deleteCustomer(){
     if(!window.confirm('Delete customer?')) return;
-    axios.delete(`https://customer-management-apps.onrender.com/api/customers/${id}`)
+    axios.delete(`http://localhost:5000/api/customers/${id}`)
       .then(()=> navigate('/'))
       .catch(e=> console.error(e));
   }

@@ -10,7 +10,7 @@ export default function CustomerListPage(){
   useEffect(()=>{ fetchList(); }, [page]);
 
   function fetchList(){
-    axios.get(`https://customer-management-apps.onrender.com/api/customers?page=${page}&q=${encodeURIComponent(q)}`)
+    axios.get(`http://localhost:5000/api/customers?page=${page}&q=${encodeURIComponent(q)}`)
       .then(r=> setCustomers(r.data.data))
       .catch(e=> console.error(e));
   }
